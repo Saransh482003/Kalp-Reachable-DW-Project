@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalp Reachable</title>
+    <link rel="stylesheet" href="../static/styles/home.css">
+    <link rel="icon" href="../../static/images/reactjs.png">
+</head>
+<body>
+    <section id="welcome">
+        <div id="tiles">
+            <p class="descTitle">Welcome to</p>
+            <p class="titles">Kalp</p>
+            <p class="titles">Reachable</p>
+            <p class="desc"><em>Discover the perfect mobile network for your needs with Mobile Network Advisor. Our platform delivers customized recommendations based on your preferences, location, and usage patterns. Whether you prioritize coverage, speed, or data plans, we've got you covered. Make informed decisions with real user reviews and detailed insights. Stay connected effortlessly – start your mobile network journey with Mobile Network Advisor today!</em></p>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 220"><path fill="rgb(0, 0, 40)" fill-opacity="1" d="M0,96L48,117.3C96,139,192,181,288,176C384,171,480,117,576,90.7C672,64,768,64,864,90.7C960,117,1056,171,1152,176C1248,181,1344,139,1392,117.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
+    </section>
+
+    <section id="formTaker">
+        <div id="flash">
+            <div id="formKeeper">
+                <p style="font-size: 2rem; font-weight: 600;">Fill in the details</p>
+                <form action="/former" method="POST" id="former">
+                    <div class="formCell">
+                        <label for="connector">Connection Type</label>
+                        <select id="connector" name="connector" required>
+                            <option value="" selected disabled>Select Connector Type</option>
+                            <option value="2G">2G</option>
+                            <option value="3G">3G</option>
+                            <option value="4G">4G</option>
+                        </select>
+                    </div>
+                    <div class="formCell">
+                        <label for="state">State</label>
+                        <select id="state" name="state" required>
+                            <option value="" selected disabled>Select State</option>
+                            <option value="Delhi & NCR">Delhi & NCR</option>
+                            <option value="Mumbai">Mumbai</option>
+                            <option value="Maharashtra & Goa">Maharashtra & Goa</option>
+                            <option value="Andhra Pradesh and Telangana">Andhra Pradesh and Telangana</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                        </select>
+                    </div>
+                    <div class="formCell">
+                        <label for="long">Longitude</label>
+                        <input type="text" id="long" name="long" value="{{findme['longitude']}}" required>
+                    </div>
+                    <div class="formCell">
+                        <label for="long">Latitude</label>
+                        <input type="text" id="lat" name="lat" value="{{findme['latitude']}}" required>
+                    </div>
+                    <input type="submit" value="Submit" id="subBtn">
+                </form>
+            </div>
+            <div id="recommender">
+                {% if recommed %}
+                    <div id="recomBox">
+                        <h1>Recommendation</h1>
+                        <p id="disc"><em>According to your preferences we suggest the following:</em></p>
+                        <p class="details">Operator : <span>{{recommed["name"]}}</span></p>
+                        <p class="details">Connector : <span>{{recommed["radio"]}}</span></p>
+                        <p class="details">State : <span>{{recommed["state"]}}</span></p>
+                    </div>
+                {% endif %}
+
+            </div>
+
+        </div>
+    </section>
+    <section id="img">
+        {% if recommed %}
+            <div id="image">
+                <img src="../static/images/plot.png" alt="" id="img">
+            </div>
+        {% endif %}
+    </section>
+    <section id="credit">Created by : <span>Saransh Saini</span></section>
+</body>
+</html>

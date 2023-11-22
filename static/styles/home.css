@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: "Poppins";
+    overflow-x: hidden;
+}
+#navBar{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    height: max-content;
+
+}
+
+#logo{
+    /* filter: grayscale(100%) brightness(1000); */
+    height: 3rem;
+    width: auto;
+    margin:0.5rem;
+}
+#welcome{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: max-content;
+    align-items: start;
+    background: url('../images/bg.jpg') no-repeat center center fixed; /* Set the background image and properties */
+    background-size: cover;
+}
+#tiles{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    color: white;
+    padding-left: 2rem;
+    justify-content: center;
+    margin-top: 6rem;
+}
+.titles{
+    font-size: 5rem;
+}
+.descTitle{
+    font-size: 1.5rem;
+}
+.desc{
+    margin-top: 2rem;
+    font-size: 1rem;
+    width: 50%;
+}
+#formTaker{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40rem;
+    background-color: rgb(0, 0, 40);
+}
+#formKeeper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* background-color:aqua; */
+    color: orange;
+    width: 45%;
+    flex-wrap: wrap;
+}
+#former{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.formCell{
+    display: flex;
+    flex-direction: column;
+}
+label{
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+select{
+    height: 2rem;
+    border-radius: 4rem;
+    text-align: center;
+    font-family: "Poppins";
+    outline: none;
+    border: 0.2rem solid orange;
+}
+input{
+    border-radius: 4rem;
+    height: 2rem;
+    text-align: center;
+    border: 0.2rem solid orange;
+}
+#subBtn{
+    margin: 2rem;
+    margin-left: 3rem;
+    width: 15rem;
+    height: 2.5rem;
+    /* background-color: #ffa500; */
+    background-color: #ffa500;
+    color: white;
+    font-size: 1.2rem;
+    font-family: "Poppins";
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+}
+#subBtn:hover{
+    background-color: #ff7b00;
+    border-color: #ff7b00;
+}
+    
+
+#flash{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    width: 100%;
+}
+#recommender{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 45%;
+
+}
+#recomBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 25rem;
+    padding: 1rem;
+    height: 15rem;
+    /* background-color: aqua; */
+    border-radius: 3rem;
+    color: white;
+    border: 0.3rem solid orange;
+}
+#recomBox h1{
+    color: #ffa500;
+    margin-bottom: 0.5rem;
+}
+#disc{
+    margin-bottom: 1rem;
+}
+p span{
+    color: #ffa500;
+}
+p{
+    font-size: 1.1rem;
+}
+#img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 40);
+    width: 100%;
+    height: max-content;
+
+}
+#image{
+    margin: 2rem;
+    width: 80%;
+    height: auto;
+    border-radius: 4rem;
+    border: 0.5rem solid orange;
+}
+#credit{
+    text-align: end;
+    height: 3rem;
+    width: 100%;
+    color: white;
+    background-color: rgb(0, 0, 40);
+    font-size: 1.2rem;
+    /* padding-right: 3rem; */
+}
+#credit span{
+    color: #ffa500;
+    margin-right: 3rem;
+}
